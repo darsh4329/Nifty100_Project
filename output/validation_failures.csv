@@ -1,0 +1,20 @@
+rule_id,severity,status,company_id,year,details
+DQ-01,CRITICAL,PASS,,,All 92 company IDs are unique
+DQ-02,CRITICAL,PASS,,,"No duplicate (company_id, year) in P&L"
+DQ-02,CRITICAL,PASS,,,"No duplicate (company_id, year) in Balance Sheet"
+DQ-02,CRITICAL,PASS,,,"No duplicate (company_id, year) in Cash Flow"
+DQ-03,CRITICAL,FAIL,,,"Found 408 orphan rows: ['profitandloss: ULTRACEMCO', 'profitandloss: ULTRACEMCO', 'profitandloss: ULTRACEMCO', 'profitandloss: ULTRACEMCO', 'profitandloss: ULTRACEMCO']..."
+DQ-04,WARNING,PASS,,,All balance sheets balance within 1%
+DQ-05,WARNING,FAIL,,,"234 OPM mismatches: ['ADANIENSOL-2024-03: src=30.0, comp=34.4', 'AXISBANK-2013-03: src=1353.0, comp=30.6', 'AXISBANK-2014-03: src=2307.0, comp=31.5']..."
+DQ-06,WARNING,PASS,,,All sales values are positive
+DQ-07,CRITICAL,FAIL,,,"99 year format errors in P&L: [""ABB: 'PARSE_ERROR'"", ""ADANIENSOL: 'PARSE_ERROR'"", ""ADANIENT: 'PARSE_ERROR'""]..."
+DQ-07,CRITICAL,FAIL,,,"5 year format errors in Balance Sheet: [""ZYDUSLIFE: 'PARSE_ERROR'"", ""ZOMATO: 'PARSE_ERROR'"", ""WIPRO: 'PARSE_ERROR'""]..."
+DQ-07,CRITICAL,PASS,,,All years in Cash Flow are in YYYY-MM format
+DQ-08,CRITICAL,PASS,,,All tickers are valid
+DQ-09,WARNING,FAIL,,,1 cash flow mismatches: ['TVSMOTOR-2022-03: diff=660.0']...
+DQ-10,WARNING,PASS,,,All fixed assets are non-negative
+DQ-11,WARNING,FAIL,,,"108 tax rates out of range: ['ADANIENT-2014-03: tax=-64.0', 'ADANIGREEN-2017-03: tax=-75.0', 'ADANIGREEN-2018-03: tax=-35.0']..."
+DQ-12,WARNING,FAIL,,,"7 dividend payouts > 200%: ['BHARTIARTL-2019-03: payout=244.0', 'BRITANNIA-2021-03: payout=204.0', 'M&M-2020-03: payout=205.0']..."
+DQ-14,WARNING,FAIL,,,"3 EPS sign inconsistencies: ['M&M-2020-03: profit=-321, eps=1.0', 'NAUKRI-2015-03: profit=-14, eps=2.0', 'TATAPOWER-2014-03: profit=12, eps=-1.0']..."
+DQ-15,INFO,PASS,,,1224/1225 (99.9%) balance sheets balance within 1%
+DQ-16,WARNING,FAIL,,,"5 companies with < 5 years: ['ATGL: PL=8, BS=8, CF=0', 'JIOFIN: PL=3, BS=3, CF=2', 'SBIN: PL=13, BS=0, CF=12']..."
