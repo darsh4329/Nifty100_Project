@@ -1,0 +1,14 @@
+ALTER TABLE financial_ratios ADD COLUMN revenue_cagr_3yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN revenue_cagr_5yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN revenue_cagr_10yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN pat_cagr_3yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN pat_cagr_5yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN pat_cagr_10yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN eps_cagr_3yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN eps_cagr_5yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN eps_cagr_10yr_flag TEXT;
+ALTER TABLE financial_ratios ADD COLUMN icr_label TEXT;
+ALTER TABLE financial_ratios ADD COLUMN high_leverage_flag INTEGER DEFAULT 0;
+ALTER TABLE financial_ratios ADD COLUMN icr_warning_flag INTEGER DEFAULT 0;
+ALTER TABLE financial_ratios ADD COLUMN cfo_quality_label TEXT; 
+ALTER TABLE financial_ratios ADD COLUMN capex_intensity_label TEXT; 
